@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="Ie-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+
+<body>
+    
+<div class="wrapper">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h1>Registration</h1>
+
+        <div class="input-box">
+            <div class="input-field">
+                <input type="text" placeholder="Full Name" required name="f">
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-field">
+                <input type="text" placeholder="Username" required name="u">
+                <i class='bx bxs-user'></i>
+            </div>
+        </div>
+
+        <div class="input-box">
+            <div class="input-field">
+                <input type="email" placeholder="Email" required name="e">
+                <i class='bx bxs-envelope' ></i>
+            </div>
+            <div class="input-field">
+                <input type="number" placeholder="Phone Number" required name="ph">
+                <i class='bx bxs-phone' ></i>
+            </div>
+        </div>
+        
+        <div class="input-box">
+            <div class="input-field">
+                <input type="password" placeholder="Password" required name="p1">
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+            <div class="input-field">
+                <input type="password" placeholder="Confirm password" required name="p2">
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+        </div>
+
+        <button type="submit" class="btn">Register</button>
+    </form>
+</div>    
+</body>
+
+</html>
